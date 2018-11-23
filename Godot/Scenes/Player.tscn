@@ -1,0 +1,158 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scripts/KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://art/Player/animation/idle_down_right/tile007.png" type="Texture" id=2]
+[ext_resource path="res://art/Player/animation/idle_right/tile014.png" type="Texture" id=3]
+[ext_resource path="res://art/Player/animation/walk_right/tile015.png" type="Texture" id=4]
+[ext_resource path="res://art/Player/animation/walk_right/tile016.png" type="Texture" id=5]
+[ext_resource path="res://art/Player/animation/walk_down/tile001.png" type="Texture" id=6]
+[ext_resource path="res://art/Player/animation/walk_down/tile002.png" type="Texture" id=7]
+[ext_resource path="res://art/Player/animation/idle_up_right/tile021.png" type="Texture" id=8]
+[ext_resource path="res://art/Player/animation/walk_up/tile029.png" type="Texture" id=9]
+[ext_resource path="res://art/Player/animation/walk_up/tile030.png" type="Texture" id=10]
+[ext_resource path="res://art/Player/animation/walk_up_right/tile022.png" type="Texture" id=11]
+[ext_resource path="res://art/Player/animation/walk_up_right/tile023.png" type="Texture" id=12]
+[ext_resource path="res://art/Player/animation/idle_up/tile028.png" type="Texture" id=13]
+[ext_resource path="res://art/Player/animation/idle_down/tile000.png" type="Texture" id=14]
+[ext_resource path="res://art/Player/animation/walk_down_right/tile008.png" type="Texture" id=15]
+[ext_resource path="res://art/Player/animation/walk_down_right/tile009.png" type="Texture" id=16]
+[ext_resource path="res://art/LightTexture/player_flashlight.png" type="Texture" id=17]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.94789, 12.0659 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle_down_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "idle_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walk_down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "idle_up_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "walk_up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk_up_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "idle_up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle_down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "walk_down_right",
+"speed": 5.0
+} ]
+
+[node name="Player" type="KinematicBody2D"]
+
+position = Vector2( 223.506, 163.863 )
+z_index = 7
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+SPEED = 6000
+DASH_MULTIPLIER = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( -0.00642395, 3.90186 )
+scale = Vector2( 1.0021, 1 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+light_mask = 0
+frames = SubResource( 2 )
+animation = "idle_down"
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="Light2D" type="Light2D" parent="." index="3"]
+
+position = Vector2( 0.33342, 4.76193 )
+enabled = true
+editor_only = false
+texture = ExtResource( 17 )
+offset = Vector2( 6.99345, 53.4291 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 3
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = true
+shadow_color = Color( 0.0627451, 0.0588235, 0.0588235, 1 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Shadow" ]
+
+
