@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_flashlight.png-36632056ccb2dd9bd01dce8c83652fd4.stex"
+path="res://.import/camera_shadow.png-9bed41f0fd8f0a9603d6ae638e8aa2aa.stex"
 
 [deps]
 
-source_file="res://art/LightTexture/player_flashlight.png"
-dest_files=[ "res://.import/player_flashlight.png-36632056ccb2dd9bd01dce8c83652fd4.stex" ]
+source_file="res://art/LightTexture/camera_shadow.png"
+dest_files=[ "res://.import/camera_shadow.png-9bed41f0fd8f0a9603d6ae638e8aa2aa.stex" ]
 
 [params]
 
