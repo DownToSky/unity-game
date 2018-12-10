@@ -1,0 +1,95 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Scenes/player.gd" type="Script" id=1]
+[ext_resource path="res://graphics/player frames/adventurer-idle-00.png" type="Texture" id=2]
+[ext_resource path="res://graphics/player frames/adventurer-idle-01.png" type="Texture" id=3]
+[ext_resource path="res://graphics/player frames/adventurer-idle-02.png" type="Texture" id=4]
+[ext_resource path="res://graphics/player frames/adventurer-idle-03.png" type="Texture" id=5]
+[ext_resource path="res://graphics/player frames/adventurer-run-00.png" type="Texture" id=6]
+[ext_resource path="res://graphics/player frames/adventurer-run-01.png" type="Texture" id=7]
+[ext_resource path="res://graphics/player frames/adventurer-run-02.png" type="Texture" id=8]
+[ext_resource path="res://graphics/player frames/adventurer-run-03.png" type="Texture" id=9]
+[ext_resource path="res://graphics/player frames/adventurer-run-04.png" type="Texture" id=10]
+[ext_resource path="res://graphics/player frames/adventurer-run-05.png" type="Texture" id=11]
+[ext_resource path="res://graphics/player frames/adventurer-jump-00.png" type="Texture" id=12]
+[ext_resource path="res://graphics/player frames/adventurer-jump-01.png" type="Texture" id=13]
+[ext_resource path="res://graphics/player frames/adventurer-jump-02.png" type="Texture" id=14]
+[ext_resource path="res://graphics/player frames/adventurer-jump-03.png" type="Texture" id=15]
+[ext_resource path="res://graphics/player frames/adventurer-crouch-00.png" type="Texture" id=16]
+[ext_resource path="res://graphics/player frames/adventurer-crouch-01.png" type="Texture" id=17]
+[ext_resource path="res://graphics/player frames/adventurer-crouch-02.png" type="Texture" id=18]
+[ext_resource path="res://graphics/player frames/adventurer-crouch-03.png" type="Texture" id=19]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": false,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 5.0
+} ]
+
+[node name="player" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "idle"
+frame = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 5.26646, 17.4809, 4.165, 8.55001, 5.7039, -0.144775, 4.165, -4.06897, 3.78028, -11.3787, -3.37561, -11.4557, -3.60644, -3.6073, -7.68453, 2.16358, -3.91422, 8.55001, -5.88079, 17.292 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing", "Transform" ]
+
+

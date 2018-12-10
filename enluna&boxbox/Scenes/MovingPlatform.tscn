@@ -1,0 +1,145 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/MovingPlatform.gd" type="Script" id=1]
+[ext_resource path="res://graphics/Tiles/cavesofgallet_tiles.png" type="Texture" id=2]
+
+[node name="MovingPlatform" type="Node2D"]
+
+script = ExtResource( 1 )
+platformLen = "2"
+
+[node name="2" type="KinematicBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Sprite" type="Sprite" parent="2" index="0"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 8, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Sprite2" type="Sprite" parent="2" index="1"]
+
+position = Vector2( -8, 0 )
+texture = ExtResource( 2 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 16, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Sprite3" type="Sprite" parent="2" index="2"]
+
+position = Vector2( 8, 0 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 16, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="2" index="3"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8.98129, -4.05733, 8.98431, -3.99487, 8.99472, -1.99638, 6.2572, 1.96937, 3.99849, -2.00679, -3.98506, -1.97557, -6.0356, 2.0006, -9.01251, -2.0172 )
+
+[node name="3" type="KinematicBody2D" parent="." index="1"]
+
+position = Vector2( 8, 8 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Sprite" type="Sprite" parent="3" index="0"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 8, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Sprite4" type="Sprite" parent="3" index="1"]
+
+position = Vector2( -8, 0 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 8, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Sprite2" type="Sprite" parent="3" index="2"]
+
+position = Vector2( -16, 0 )
+texture = ExtResource( 2 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 16, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Sprite3" type="Sprite" parent="3" index="3"]
+
+position = Vector2( 8, 0 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 16, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="3" index="4"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16.9817, -3.94818, 8.98431, -3.99487, 8.99472, -1.99638, 6.2572, 1.96937, 3.99849, -2.00679, -11.9542, -1.98339, -14.1116, 2.004, -17.0395, -2.09896 )
+
+[node name="4" type="KinematicBody2D" parent="." index="2"]
+
+position = Vector2( 8, 16 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Sprite" type="Sprite" parent="4" index="0"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 8, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Sprite4" type="Sprite" parent="4" index="1"]
+
+position = Vector2( -8, 0 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 8, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Sprite5" type="Sprite" parent="4" index="2"]
+
+position = Vector2( 8, 0 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 8, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Sprite2" type="Sprite" parent="4" index="3"]
+
+position = Vector2( -16, 0 )
+texture = ExtResource( 2 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 16, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Sprite3" type="Sprite" parent="4" index="4"]
+
+position = Vector2( 16, 0 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 16, 8, 8, 8 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="4" index="5"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16.9817, -3.94818, 17.0099, -4.01279, 17.0389, -2.06742, 14.2225, 1.99755, 11.7835, -2.12549, -11.9542, -1.98339, -14.1116, 2.004, -17.0395, -2.09896 )
+
+

@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/adventurer-walk-00.png-cf7375cd5e3cc7e2ee62fa78bc058c58.stex"
+
+[deps]
+
+source_file="res://graphics/unused/Adventurer-Hand-Combat/Individual Sprites/adventurer-walk-00.png"
+dest_files=[ "res://.import/adventurer-walk-00.png-cf7375cd5e3cc7e2ee62fa78bc058c58.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
