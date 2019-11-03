@@ -61,12 +61,7 @@ frames = SubResource( 1 )
 animation = "idle"
 frame = 2
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
-
-build_mode = 0
-polygon = PoolVector2Array( 5.26646, 17.4809, 4.165, 8.55001, 5.7039, -0.144775, 4.165, -4.06897, 3.78028, -11.3787, -3.37561, -11.4557, -3.60644, -3.6073, -7.68453, 2.16358, -3.91422, 8.55001, -5.88079, 17.292 )
-
-[node name="Camera2D" type="Camera2D" parent="." index="2"]
+[node name="Camera2D" type="Camera2D" parent="." index="1"]
 
 anchor_mode = 1
 rotating = false
